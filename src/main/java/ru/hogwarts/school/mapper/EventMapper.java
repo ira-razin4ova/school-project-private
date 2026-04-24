@@ -10,7 +10,6 @@ import java.util.List;
 public interface EventMapper {
 
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "tasks", ignore = true)
     Event toEntity(CreateEventDto dto);
 
     EventDto toDto(Event entity);

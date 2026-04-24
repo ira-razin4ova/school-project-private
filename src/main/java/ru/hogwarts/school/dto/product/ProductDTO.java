@@ -9,9 +9,9 @@ public class ProductDTO {
     private String name;
     private Integer price;
     private String mainPic;
+    //private List <ProductSizeDTO> sizes;
 
 
     // private List<String> images;
     //private List<Long> facultyIds;
-    // private List<ProductSizeDTO> sizes;
 }

@@ -66,7 +66,7 @@ public class EventService {
     }
 
     @Transactional
-    public EventDto patchEvent(Long id, PatchEventDto patchDto) {
+    public EventFullDto patchEvent(Long id, PatchEventDto patchDto) {
         Event event = getEventOrThrow(id);
 
         eventMapper.updateEntityFromDto(patchDto, event);
@@ -75,7 +75,7 @@ public class EventService {
             synchronizeTasks(event, patchDto.tasks());
         }
 
-        return eventMapper.toDto(eventRepository.save(event));
+        return eventMapper.toDtoFull(eventRepository.save(event));
     }
 
     /**

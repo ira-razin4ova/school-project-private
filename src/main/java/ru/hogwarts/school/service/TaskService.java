@@ -32,6 +32,11 @@ public class TaskService {
         return eventRepository.findById(id).orElseThrow(() -> new NotFoundException("Task " + id + "not found"));
     }
 
+    public TaskDto getByIdTask (Long id) {
+        Task task = getTaskOrThrow(id);
+        return taskMapper.toDto(task);
+    }
+
     @Transactional
     public TaskDto createTask (CreateTaskDto dto) {
         Task task = taskMapper.toEntity(dto);

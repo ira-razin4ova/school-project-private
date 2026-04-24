@@ -7,6 +7,7 @@ import ru.hogwarts.school.dto.student.StudentDto;
 import ru.hogwarts.school.model.Student;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Long> {
@@ -25,4 +26,7 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
 
     @Query (value = "SELECT * FROM student ORDER BY id desc LIMIT 5", nativeQuery = true)
     List <Student> getStudentLimitFive ();
+
+    @Query("SELECT s FROM Student s LEFT JOIN FETCH s.oneFaculty WHERE s.id = :id")
+    Optional<Student> findByIdFull(Long id);
 }
