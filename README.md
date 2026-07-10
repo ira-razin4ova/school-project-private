@@ -13,3 +13,4 @@
 Безопасность: Поиск студентов по зашифрованным данным (телефон, номер студенческого, фамилия) с соблюдением стандартов защиты персональных данных.
 
 Стек: Java, Spring Boot, Hibernate/JPA, PostgreSQL.
+<img width="2069" height="2031" alt="image" src="https://github.com/user-attachments/assets/35ab0314-e5a7-4d4d-bf4a-92c1d63bd89a" />
