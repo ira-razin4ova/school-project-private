@@ -47,6 +47,7 @@
 | **AppUserDetails** | Обертка над User для Spring Security |
 | **UserDetailsServiceImpl** | Загрузка пользователя по email или ID |
 
+
 ### Flow онбординга (первый вход)
 
 ```mermaid
@@ -77,6 +78,8 @@ sequenceDiagram
     end
     A->>DB: user.setPassword(hash), save(user)
     A-->>S: JWT token
+
+
 
 Отказоустойчивое хранилище токенов
 Система использует двухуровневое хранилище для токенов установки пароля:
